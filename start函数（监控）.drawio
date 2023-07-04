@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-03T11:58:46.855Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="nri6ZAhG7J8hnNvMC8fE" version="21.5.2" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2023-07-04T02:30:04.987Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="6rMgkypjW_QERP2NUIoh" version="21.5.2" type="github" pages="9">
   <diagram name="top_snoop" id="3nX2BSyTHCfL3Wa8FLLo">
     <mxGraphModel dx="1235" dy="636" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -823,45 +823,82 @@
     </mxGraphModel>
   </diagram>
   <diagram id="hlvVAznfJB85VgQKH4Or" name="detect文件关系">
-    <mxGraphModel dx="1050" dy="541" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="473" dy="531" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="tLNOCQRMNJGWiS4onFmV-1" value="train.py" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="96" y="343" width="73" height="33" as="geometry" />
+          <mxGeometry x="10" y="345" width="73" height="33" as="geometry" />
         </mxCell>
         <mxCell id="tLNOCQRMNJGWiS4onFmV-2" value="model.pkl" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="180" y="455" width="87" height="33" as="geometry" />
+          <mxGeometry x="94" y="457" width="87" height="33" as="geometry" />
         </mxCell>
         <mxCell id="tLNOCQRMNJGWiS4onFmV-3" value="detect.py" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="302" y="343" width="86" height="33" as="geometry" />
+          <mxGeometry x="216" y="345" width="86" height="33" as="geometry" />
         </mxCell>
         <mxCell id="tLNOCQRMNJGWiS4onFmV-4" value="model.onnx" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="397" y="455" width="100" height="33" as="geometry" />
+          <mxGeometry x="311" y="457" width="100" height="33" as="geometry" />
         </mxCell>
         <mxCell id="tLNOCQRMNJGWiS4onFmV-5" value="detect_onnx.py" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="486" y="343" width="128" height="33" as="geometry" />
+          <mxGeometry x="400" y="345" width="128" height="33" as="geometry" />
         </mxCell>
-        <mxCell id="tLNOCQRMNJGWiS4onFmV-6" value="Generates" style="curved=1;startArrow=none;endArrow=block;exitX=0.49343966131340966;exitY=1.0121212583599668;entryX=0.4944953479986081;entryY=-0.0060605713815400095;rounded=0;" edge="1" parent="1" source="tLNOCQRMNJGWiS4onFmV-1" target="tLNOCQRMNJGWiS4onFmV-2">
+        <mxCell id="tLNOCQRMNJGWiS4onFmV-6" value="生成" style="curved=1;startArrow=none;endArrow=block;exitX=0.49343966131340966;exitY=1.0121212583599668;entryX=0.4944953479986081;entryY=-0.0060605713815400095;rounded=0;" edge="1" parent="1" source="tLNOCQRMNJGWiS4onFmV-1" target="tLNOCQRMNJGWiS4onFmV-2">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tLNOCQRMNJGWiS4onFmV-7" value="Used by" style="curved=1;startArrow=none;endArrow=block;exitX=0.77;exitY=-0.182;entryX=0.5;entryY=1;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tLNOCQRMNJGWiS4onFmV-2" target="tLNOCQRMNJGWiS4onFmV-3">
+        <mxCell id="tLNOCQRMNJGWiS4onFmV-7" value="使用" style="curved=1;startArrow=none;endArrow=block;exitX=0.77;exitY=-0.182;entryX=0.5;entryY=1;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tLNOCQRMNJGWiS4onFmV-2" target="tLNOCQRMNJGWiS4onFmV-3">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tLNOCQRMNJGWiS4onFmV-8" value="Generates" style="curved=1;startArrow=none;endArrow=block;exitX=0.5002452939055687;exitY=1.0000001155968867;entryX=0.500210952758789;entryY=0.012121316158410275;rounded=0;" edge="1" parent="1" source="tLNOCQRMNJGWiS4onFmV-3" target="tLNOCQRMNJGWiS4onFmV-4">
+        <mxCell id="tLNOCQRMNJGWiS4onFmV-8" value="生成" style="curved=1;startArrow=none;endArrow=block;exitX=0.5002452939055687;exitY=1.0000001155968867;entryX=0.500210952758789;entryY=0.012121316158410275;rounded=0;" edge="1" parent="1" source="tLNOCQRMNJGWiS4onFmV-3" target="tLNOCQRMNJGWiS4onFmV-4">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tLNOCQRMNJGWiS4onFmV-9" value="Used by" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0;entryX=0.5;entryY=1;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tLNOCQRMNJGWiS4onFmV-4" target="tLNOCQRMNJGWiS4onFmV-5">
+        <mxCell id="tLNOCQRMNJGWiS4onFmV-9" value="使用" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0;entryX=0.5;entryY=1;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tLNOCQRMNJGWiS4onFmV-4" target="tLNOCQRMNJGWiS4onFmV-5">
+          <mxGeometry x="0.0015" relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tLNOCQRMNJGWiS4onFmV-10" value="异常点" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="515" y="459" width="100" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="tLNOCQRMNJGWiS4onFmV-11" value="LOF算法" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="604" y="347" width="128" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="tLNOCQRMNJGWiS4onFmV-12" value="检测出" style="curved=1;startArrow=none;endArrow=block;exitX=0.5002452939055687;exitY=1.0000001155968867;entryX=0.500210952758789;entryY=0.012121316158410275;rounded=0;" edge="1" parent="1" target="tLNOCQRMNJGWiS4onFmV-10">
+          <mxGeometry x="0.0075" relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="463" y="380" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tLNOCQRMNJGWiS4onFmV-13" value="输入" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0;entryX=0.5;entryY=1;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tLNOCQRMNJGWiS4onFmV-10" target="tLNOCQRMNJGWiS4onFmV-11">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="tLNOCQRMNJGWiS4onFmV-14" value="可视化的异常检测结果" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="718" y="457" width="83" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="tLNOCQRMNJGWiS4onFmV-16" value="输出" style="curved=1;startArrow=none;endArrow=block;exitX=0.5002452939055687;exitY=1.0000001155968867;entryX=0.500210952758789;entryY=0.012121316158410275;rounded=0;" edge="1" parent="1" target="tLNOCQRMNJGWiS4onFmV-14">
+          <mxGeometry x="0.1367" y="5" relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="666" y="378" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="lvRkYQN7xVsasImGp6Zv" name="第 9 页">
+    <mxGraphModel dx="1050" dy="541" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
