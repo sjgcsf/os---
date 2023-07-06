@@ -1,105 +1,56 @@
-<mxfile host="app.diagrams.net" modified="2023-07-04T02:30:04.987Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="6rMgkypjW_QERP2NUIoh" version="21.5.2" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2023-07-06T03:08:17.036Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="yJonU_M7zPsaCngYlp0D" version="21.5.2" type="github" pages="9">
   <diagram name="top_snoop" id="3nX2BSyTHCfL3Wa8FLLo">
-    <mxGraphModel dx="1235" dy="636" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1050" dy="485" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#272525" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-2" value="1. Import Modules" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="50" y="187" width="144" height="33" as="geometry" />
+        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-14" value="Start " style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fontColor=#FFFFFF;fillColor=none;strokeColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="396.5" y="120" width="51" height="51" as="geometry" />
         </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-3" value="2. Get Process" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="64" y="270" width="117" height="33" as="geometry" />
+        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-15" value="1. 根据命令行参数configure，导入相应的模块" style="whiteSpace=wrap;strokeWidth=2;strokeColor=#FFFFFF;fontColor=#FFFFFF;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="345.5" y="196" width="153" height="44" as="geometry" />
         </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-4" value="3. Generate eBPF Program" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="20" y="354" width="204" height="33" as="geometry" />
+        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-16" value="2. 获取被监控的进程proc" style="whiteSpace=wrap;strokeWidth=2;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="359" y="270" width="126" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-5" value="4. Create BPF Object" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="38" y="437" width="168" height="33" as="geometry" />
+        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-17" value="3.通过函数generate_prg，生成eBPF程序(prg)和输出文件(output_fp)" style="whiteSpace=wrap;strokeWidth=2;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="317" y="341" width="210" height="46" as="geometry" />
         </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-6" value="5. Attach eBPF Program" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="30" y="520" width="184" height="33" as="geometry" />
+        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-18" value="4.建BPF对象（b）,把生成的eBPF程序赋给b" style="whiteSpace=wrap;strokeWidth=2;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="336" y="410" width="172" height="43" as="geometry" />
         </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-7" value="6. Start Main Loop" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="49" y="604" width="146" height="33" as="geometry" />
+        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-19" value="5.通过attach_probes，挂载eBPF程序到指定的进程上" style="whiteSpace=wrap;strokeWidth=2;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="327" y="480" width="190" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-8" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.4977030305780916;exitY=0.9989316239316239;entryX=0.5016059345669217;entryY=-0.003787878787878788;rounded=0;" parent="1" target="h7UFg-lYE6FMvcC_o7Jn-2" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points" />
-            <mxPoint x="122.5" y="137" as="sourcePoint" />
-          </mxGeometry>
+        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-20" value="6.开始主循环main_loop，进行监控,记录数据" style="whiteSpace=wrap;strokeWidth=2;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="345.5" y="553" width="151" height="36" as="geometry" />
         </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-9" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5016059345669217;exitY=1.0083333795720881;entryX=0.4977030305780916;entryY=0.008333379572088068;rounded=0;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-2" target="h7UFg-lYE6FMvcC_o7Jn-3" edge="1">
+        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-21" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.4977030305780916;exitY=0.9989316239316239;entryX=0.5016059345669217;entryY=-0.003787878787878788;rounded=0;strokeColor=#FFFFFF;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-14" target="h7UFg-lYE6FMvcC_o7Jn-15" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-10" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.4977030305780916;exitY=1.020454637932055;entryX=0.5011336008707682;entryY=-0.009848392370975378;rounded=0;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-3" target="h7UFg-lYE6FMvcC_o7Jn-4" edge="1">
+        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-22" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5016059345669217;exitY=1.0083333795720881;entryX=0.4977030305780916;entryY=0.008333379572088068;rounded=0;strokeColor=#FFFFFF;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-15" target="h7UFg-lYE6FMvcC_o7Jn-16" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-11" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5011336008707682;exitY=1.0022728659889915;entryX=0.5013765153430757;entryY=0.0022728659889914775;rounded=0;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-4" target="h7UFg-lYE6FMvcC_o7Jn-5" edge="1">
+        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-23" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.4977030305780916;exitY=1.020454637932055;entryX=0.5011336008707682;entryY=-0.009848392370975378;rounded=0;strokeColor=#FFFFFF;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-16" target="h7UFg-lYE6FMvcC_o7Jn-17" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-12" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5013765153430757;exitY=1.0143941243489583;entryX=0.5012568183567213;entryY=0.014394124348958334;rounded=0;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-5" target="h7UFg-lYE6FMvcC_o7Jn-6" edge="1">
+        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-24" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5011336008707682;exitY=1.0022728659889915;entryX=0.5013765153430757;entryY=0.0022728659889914775;rounded=0;strokeColor=#FFFFFF;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-17" target="h7UFg-lYE6FMvcC_o7Jn-18" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-13" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5012568183567213;exitY=1.0265153827089253;entryX=0.5015839354632652;entryY=-0.0037876475941051135;rounded=0;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-6" target="h7UFg-lYE6FMvcC_o7Jn-7" edge="1">
+        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-25" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5013765153430757;exitY=1.0143941243489583;entryX=0.5012568183567213;entryY=0.014394124348958334;rounded=0;strokeColor=#FFFFFF;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-18" target="h7UFg-lYE6FMvcC_o7Jn-19" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-14" value="Start Function" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="87" y="80" width="71" height="71" as="geometry" />
-        </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-15" value="1. 根据命令行参数configure，导入相应的模块" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="27" y="187" width="190" height="53" as="geometry" />
-        </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-16" value="2. 获取被监控的进程proc" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="59" y="270" width="126" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-17" value="3.通过函数generate_prg，生成eBPF程序(prg)和输出文件(output_fp)" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="17.5" y="354" width="210" height="46" as="geometry" />
-        </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-18" value="4.建BPF对象（b）,把生成的eBPF程序赋给b" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="36" y="437" width="172" height="43" as="geometry" />
-        </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-19" value="5.通过attach_probes，挂载eBPF程序到指定的进程上" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="27" y="520" width="190" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-20" value="6.开始主循环main_loop，进行监控 " style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="46.5" y="604" width="151" height="36" as="geometry" />
-        </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-21" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.4977030305780916;exitY=0.9989316239316239;entryX=0.5016059345669217;entryY=-0.003787878787878788;rounded=0;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-14" target="h7UFg-lYE6FMvcC_o7Jn-15" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-22" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5016059345669217;exitY=1.0083333795720881;entryX=0.4977030305780916;entryY=0.008333379572088068;rounded=0;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-15" target="h7UFg-lYE6FMvcC_o7Jn-16" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-23" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.4977030305780916;exitY=1.020454637932055;entryX=0.5011336008707682;entryY=-0.009848392370975378;rounded=0;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-16" target="h7UFg-lYE6FMvcC_o7Jn-17" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-24" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5011336008707682;exitY=1.0022728659889915;entryX=0.5013765153430757;entryY=0.0022728659889914775;rounded=0;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-17" target="h7UFg-lYE6FMvcC_o7Jn-18" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-25" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5013765153430757;exitY=1.0143941243489583;entryX=0.5012568183567213;entryY=0.014394124348958334;rounded=0;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-18" target="h7UFg-lYE6FMvcC_o7Jn-19" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-26" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5012568183567213;exitY=1.0265153827089253;entryX=0.5015839354632652;entryY=-0.0037876475941051135;rounded=0;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-19" target="h7UFg-lYE6FMvcC_o7Jn-20" edge="1">
+        <mxCell id="h7UFg-lYE6FMvcC_o7Jn-26" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5012568183567213;exitY=1.0265153827089253;entryX=0.5015839354632652;entryY=-0.0037876475941051135;rounded=0;strokeColor=#FFFFFF;" parent="1" source="h7UFg-lYE6FMvcC_o7Jn-19" target="h7UFg-lYE6FMvcC_o7Jn-20" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
           </mxGeometry>
